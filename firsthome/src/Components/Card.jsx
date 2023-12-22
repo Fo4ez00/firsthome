@@ -10,7 +10,7 @@ const Card = ({ course }) => {
 
     <div className="card__info">
         <div className="user">
-        <img className="user-avatar" src={course.user.avatar} alt={course.user.name} />
+        <img  src={course.user.avatar} alt={course.user.name} />
           <p>{course.user.name}</p>
         </div>
         <div className="rating">
