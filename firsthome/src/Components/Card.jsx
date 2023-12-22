@@ -4,9 +4,9 @@ const Card = ({ course }) => {
     <div className="card">
     <div className="image__container">
     <img src={course.image} alt={course.title} />
-      <div className="level">Beginner</div>
+      <div className="level">{course.level}</div>
     </div>
-    <h3 className="card__title">Introduction Basic Programming HTML & CSS</h3>
+    <h3 className="card__title">{course.title}</h3>
 
     <div className="card__info">
         <div className="user">
@@ -23,6 +23,8 @@ const Card = ({ course }) => {
         <div>{course.students} Students</div>
         <div> {course.modules} Modules</div>
         <div> {course.finishedModules} </div>
+        <div >Duration: {course.duration} seconds</div>
+           {course.isMyCourse && <div>My Course</div>}
       </div>
 
 
