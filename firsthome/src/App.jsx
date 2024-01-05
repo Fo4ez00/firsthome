@@ -1,11 +1,11 @@
-import Counter from "./Components/Counter"
+import DataFetchingComponent from "./Components/Fetch"
 
 
 
 
 function App() {
   return (
-    <Counter/>
+    <DataFetchingComponent/>
   )
 }
 
