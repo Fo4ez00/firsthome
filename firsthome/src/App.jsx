@@ -1,22 +1,16 @@
-import {NavLink, Route, Routes } from 'react-router-dom';
-import UserList from './Components/UserList';
-import UserDetail from './Components/UserDetail';
 
+import { AuthContextProvider } from './AuthContext';
+import ParentComponent from './Components/ParentComponents';
 
-
-
-function App() {
+const App = () => {
   return (
-    <div className='App'>
-  <nav>
-    <NavLink to='/'>UserList</NavLink>
-  </nav>
-    <Routes>
-      <Route path="/" element ={<UserList/>} />
-      <Route path="/user/:id" element ={<UserDetail/>} />
-    </Routes>
-  </div>
-  )
-}
+    <AuthContextProvider>
+      <div>
+        <h1>My App</h1>
+        <ParentComponent />
+      </div>
+    </AuthContextProvider>
+  );
+};
 
 export default App;
