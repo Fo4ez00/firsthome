@@ -1,15 +1,14 @@
-
-import { AuthContextProvider } from './AuthContext';
-import ParentComponent from './Components/ParentComponents';
+import { Provider } from "react-redux";
+import Counter from "./Components/Counter";
+import store from "./Store/Store";
 
 const App = () => {
   return (
-    <AuthContextProvider>
+    <Provider store={store}>
       <div>
-        <h1>My App</h1>
-        <ParentComponent />
+        <Counter />
       </div>
-    </AuthContextProvider>
+    </Provider>
   );
 };
 
