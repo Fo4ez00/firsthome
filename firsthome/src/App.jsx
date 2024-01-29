@@ -1,11 +1,17 @@
-import Counter from "./Components/counter";
+import { NavLink, Route, Routes } from "react-router-dom";
+import Users from "./Components/Posts";
 
-const App = () => {
+function App() {
   return (
     <div>
-      <Counter />
+      <nav>
+        <NavLink to="/users">Users</NavLink>
+      </nav>
+      <Routes>
+        <Route path="/users" element={<Users />} />
+      </Routes>
     </div>
   );
-};
+}
 
 export default App;
